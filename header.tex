@@ -1,0 +1,94 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[right]{eurosym}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{enumitem}
+
+\usepackage{blindtext}
+\usepackage{todonotes}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\setparsizes{1em}{0.33em}{0pt plus 1fil}
+
+
+% ========= HYPERREF & Colors ===========
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0,0,.65}
+\definecolor{darkgreen}{rgb}{0.28,0.41,0.19}
+\usepackage[%
+  pdfauthor={Tilman Birnstiel},%
+  pdfstartview=FitH,%
+  breaklinks=true,%
+  bookmarks=true,%
+  colorlinks=true,%
+  linkcolor= darkblue,
+  anchorcolor=black,%
+  citecolor=darkgreen,
+  filecolor=black,%
+  menucolor=black,%
+  urlcolor=darkblue%
+  ]{hyperref}
+
+% ========== BIBLIOGRAPHY STUFF ============
+
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\input{abbrev.tex}
+\setlength{\bibsep}{0.0cm}
+% ============== SOME MACROS ===============
+
+\newcommand{\cont}{\textcolor{red}{\textbf{continue}}\xspace}
+\newcommand{\myblindtext}[1][1]{\textcolor{red}{\Blindtext[#1]}}
+
+% ==========================================
+% save space before and after section
+%###
+\usepackage{titlesec} 
+\titlespacing*{\section}      {0pt}{1.5ex}{1ex}
+\titlespacing*{\subsection}   {0pt}{1.5ex}{0.8ex}
+\titlespacing*{\subsubsection}{0pt}{1.5ex}{0.8ex}
+\titlespacing*{\paragraph}    {0pt}{1.0ex}{0.8ex}
+%###
+% ==========================================
+% change font size of captions
+\usepackage[font=small]{caption}
+
+% ==========================================
+
+%  consecutive figure numbers
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+
+% page layout
+\usepackage[a4paper,margin=0.8in,bottom=1in]{geometry}
+
+% use arial
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% use letters for chapter numbering
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+% no chapter letter in section number 
+\renewcommand*{\thesection}{\arabic{section}}
+
+% numbering down to paragraph
+\setcounter{secnumdepth}{5}
+
+\newcommand{\comment}[1]{\textcolor{red}{#1}}
+
+% =================== HEADER ====================
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\renewcommand{\headrulewidth}{.5pt}% header rule
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{\footnotesize page \thepage\ of \pageref*{LastPage}}
+\fancyhead[L]{\footnotesize \textcolor{red}{Jane Doe}}
+\fancyfoot{} 
+\fancyhead[C]{\textsc{Project Description}}

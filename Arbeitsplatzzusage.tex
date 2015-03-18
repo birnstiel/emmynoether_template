@@ -1,0 +1,121 @@
+\documentclass[a4paper,10pt,ngerman,numbers=noenddot]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+\usepackage{xspace}
+
+% ==========================================
+
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+
+% page layout
+\usepackage[a4paper,margin=1in,bottom=3cm]{geometry}
+
+% use arial
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% use letters for chapter numbering
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+% no chapter letter in section number 
+\renewcommand*{\thesection}{\arabic{section}}
+
+% numbering down to paragraph
+\setcounter{secnumdepth}{5}
+
+\parindent 0pt
+
+\makeatletter
+\newif\ifmale
+\maletrue
+\makeatother
+
+% ============= change only the following parts ==================
+%\maletrue % for a man
+\malefalse % for a woman
+\newcommand{\firstname}{Jane\xspace}
+\newcommand{\lastname}{Doe\xspace}
+\newcommand{\institute}{Some Institute\xspace}
+\newcommand{\institutearticle}{Das\xspace}
+\newcommand{\topic}{Research topic\xspace}
+
+% ============== everything below should stay unchanged =============================
+
+
+\makeatletter
+\ifmale
+	\newcommand{\herrnfrau}{Herrn\xspace}
+	\newcommand{\seinihr}{sein\xspace}
+	\newcommand{\ersie}{er\xspace}
+	\newcommand{\ihmihr}{ihm\xspace}
+	\newcommand{\employee}{wissenschaftlicher Mitarbeiter\xspace}
+	\newcommand{\signature}{Unterschrift des antragstellenden Nachwuchsgruppenleiters}
+	\newcommand{\inending}{}
+	\newcommand{\seinesihres}{seines\xspace}
+	\newcommand{\seinenihren}{seinen\xspace}
+	\newcommand{\seinerihrer}{seiner\xspace}
+\else
+	\newcommand{\herrnfrau}{Frau\xspace}
+	\newcommand{\seinihr}{ihr\xspace}
+	\newcommand{\ersie}{sie\xspace}
+	\newcommand{\ihmihr}{ihr\xspace}
+	\newcommand{\employee}{wissenschaftliche Mitarbeiterin\xspace}
+	\newcommand{\signature}{Unterschrift der antragstellenden Nachwuchsgruppenleiterin}
+	\newcommand{\inending}{in}
+	\newcommand{\seinesihres}{ihres\xspace}
+	\newcommand{\seinenihren}{ihren\xspace}
+	\newcommand{\seinerihrer}{ihrer\xspace}
+\fi
+\makeatother
+
+\begin{document}
+\thispagestyle{empty}
+\textbf{Vertrag mit der aufnehmenden Einrichtung / Arbeitgebererklärung}\\[0.5cm]
+
+\begin{center}
+\bf
+Vertrag\\
+zwischen
+\end{center}
+
+\herrnfrau \firstname \lastname \\
+
+\begin{center}
+und\\
+\end{center}
+
+
+der aufnehmenden Einrichtung \emph{\institute} über die Rechtsstellung von \herrnfrau \lastname als Emmy Noether-Nachwuchsgruppenleiter\inending.\\
+
+\institutearticle \institute stellt \herrnfrau \lastname im Falle der Bewilligung \seinesihres Antrags auf Förderung im Rahmen des Emmy Noether-Programms durch die Deutsche Forschungsgemeinschaft (DFG) befristet für die Dauer \seinerihrer Förderung als \employee ein. Sie stellt \ihmihr für diesen Zeitraum die notwendige Grundausstattung (z. B. Laborräume, Büroräume etc.) zur Verfügung. Es gelten die an unserer Einrichtung einschlägigen Tarifvorschriften mit folgenden Maßgaben:
+
+\begin{itemize}
+\item[a)]	Die Arbeitspflicht von \herrnfrau \lastname ist beschränkt auf \seinihr von der DFG gefördertes Forschungsvorhaben \emph{\topic}, und damit unmittelbar zu\-sammen\-hängende wissenschaftliche Dienstleistungen.
+\item[b)]	Die aufnehmende Institution nimmt nicht durch dienstliche Anordnungen Einfluss auf die selb\-ständige Bearbeitung des genannten Forschungsvorhabens.
+\end{itemize}
+
+Der vorstehende Passus ist notwendiger Bestandteil der Arbeitgebererklärung.
+Die folgenden Vereinbarungen unter c) und d) sind fakultativ und stellen keine zwingende Voraussetzung für die Antragstellung im Emmy Noether-Programm dar. Die DFG begrüßt diese Vereinbarungen jedoch ausdrücklich.
+
+\begin{itemize}
+\item[c)]	Die aufnehmende Institution erklärt, dass \herrnfrau \lastname auf \seinenihren Wunsch Lehraufgaben im Umfang von regelmäßig zwei Semesterwochenstunden übernehmen kann. Möchte \herrnfrau \lastname Lehraufgaben übernehmen, so hat \ersie dies so rechtzeitig bei der Fakultät/dem Fachbereich anzumelden, dass eine ordnungsgemäße Planung der Lehrveranstaltungen möglich ist.
+Hat \herrnfrau \lastname den Wunsch nach einer Übernahme von Lehraufgaben angemeldet, ist \ersie zur Übernahme der Lehraufgaben in diesem Umfang verpflichtet.
+\item[d)]	Die aufnehmende Institution erklärt, dass \herrnfrau \lastname das Recht zuerkannt wird, Doktoranden zur Promotion zu führen.
+\end{itemize}
+
+Die/Der für die aufnehmende Institution Unterzeichnende bestätigt, dass die für die Unterzeichnung notwendige Befugnis vorliegt und alle notwendigen internen Abstimmungen erfolgt sind.\\[0.75cm]
+
+
+\underline{\hspace{7.5cm}}\\
+\begin{small}Ort, Datum\end{small}\\[1.2cm]
+
+
+\underline{\hspace{7.5cm}}\hspace{1cm}\underline{\hspace{7.5cm}}\\
+\parbox{7.5cm}{Unterschrift und Stempel der aufnehmenden Einrichtung}\hspace{1cm}\parbox{7.5cm}{\signature}\\[0.75cm]
+
+\underline{\hspace{7.5cm}}\\
+\parbox{7.5cm}{Name und Funktion des/der für die
+aufnehmende Institution Unterzeichnenden}
+
+\end{document}
