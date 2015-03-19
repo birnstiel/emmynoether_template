@@ -10,5 +10,5 @@ This repository contains my own personal template for an [Emmy Noether Grant](ht
 
 # Disclaimer
 
-This repository is published under the [MIT license](https://raw.githubusercontent.com/birnstiel/erc_template/master/LICENSE.md).
+This repository is published under the [MIT license](https://raw.githubusercontent.com/birnstiel/emmynoether_template/master/LICENSE.md).
 Use it at own risk and make sure that you follow all the guidelines of future procedures, which might look different than this template. This is *not* an official template from the DFG.
